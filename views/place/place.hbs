@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-5">
+
+            <table class="table table-hover table-dark mt-5">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre del Lugar</th>
+                        <th scope="col">Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each place}}
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>
+                            {{!-- I want things --}}
+                            <a href="#" class="itemPlace">
+                                {{name}}
+                            </a>
+                            {{!-- --}}
+                        </td>
+                        <td>{{type}}</td>
+                        <td>
+                            <a href="lugares/editar/{{id}}" class=" btn btn-success">Editar</a>
+                        </td>
+                        <td>
+                            <a href="lugares/eliminar/{{id}}" class="btn btn-danger">Eliminar</a>
+                        </td>
+                    </tr>
+                    {{/each }}
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="col-md-7">
+            <figure id="myMap"></figure>
+
+        </div>
+    </div>
+</div>
+
+
+<a href="/lugares/crea" class="btn btn-success">Crear</a>
+
+<script src="/js/directions.js"></script>
+<script src="/js/mapStyles.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/js/maps.js"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJQKY_4fQM-3INz7AXbWOxRcbeJqXQ9bE&callback=initMap"></script>

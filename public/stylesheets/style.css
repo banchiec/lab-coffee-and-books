@@ -4,9 +4,21 @@ body {
 }
 
 a {
-  color: #00b7ff;
+  /* color: #00b7ff; */
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  color: grey;
+  text-decoration: none;
 }
 
 h1 {
   color: 15px;
+}
+
+#myMap{
+  height: 65vh;
+  background-color: green;
+  margin-top: 3rem;
 }
